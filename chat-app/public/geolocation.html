@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    say hii....
+    <button id="loc">locbtn</button>
+    <p id="display"></p>
+  </body>
+
+  <script type="text/javascript">
+    document.querySelector('#loc').addEventListener('click', () => {
+      <!-- navigator.geolocation.getCurrentPostion((pos) => {
+        document.querySelector('#display').innerHTML=pos
+      }) -->
+
+      var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+0
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+
+    })
+  </script>
+</html>

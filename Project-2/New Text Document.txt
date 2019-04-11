@@ -1,0 +1,1 @@
+apiLink:   http://api.openweathermap.org/data/2.5/forecast?q=guwahati&APPID=74273ac35e8b9ecd80320d35226a88bc
